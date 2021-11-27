@@ -1,0 +1,11 @@
+--- a/Programs/Makefile.in	2020-04-06 00:02:42.000000000 -0500
++++ b/Programs/Makefile.in	2020-05-14 23:19:26.948530922 -0500
+@@ -654,7 +654,7 @@
+ 	[ ! -f lib.def ] || mv lib.def $(API_DEF)
+ 
+ $(API_ARC): $(API_CLIENT_OBJECTS)
+-	ar rc $@ $(API_CLIENT_OBJECTS)
++	$(AR) rc $@ $(API_CLIENT_OBJECTS)
+ 	$(RANLIB) $@
+ 
+ brlapi_client.$O:

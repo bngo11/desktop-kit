@@ -1,0 +1,19 @@
+--- a/Autostart/Udev/rules	2020-04-05 05:35:34.000000000 -0500
++++ b/Autostart/Udev/rules	2020-05-14 23:20:45.088534696 -0500
+@@ -282,14 +282,14 @@
+ # Product: CP210x UART Bridge / myAVR mySmartUSB light
+ # BrailleMemo [Pocket]
+ # Seika [Braille Display]
+-ENV{PRODUCT}=="10c4/ea60/*", ENV{BRLTTY_BRAILLE_DRIVER}="mm,sk", GOTO="brltty_usb_run"
++#ENV{PRODUCT}=="10c4/ea60/*", ENV{BRLTTY_BRAILLE_DRIVER}="mm,sk", GOTO="brltty_usb_run"
+ 
+ # Device: 10C4:EA80
+ # Generic Identifier
+ # Vendor: Cygnal Integrated Products, Inc.
+ # Product: CP210x UART Bridge
+ # Seika [Note Taker]
+-ENV{PRODUCT}=="10c4/ea80/*", ENV{BRLTTY_BRAILLE_DRIVER}="sk", GOTO="brltty_usb_run"
++#ENV{PRODUCT}=="10c4/ea80/*", ENV{BRLTTY_BRAILLE_DRIVER}="sk", GOTO="brltty_usb_run"
+ 
+ # Device: 1148:0301
+ # BrailleMemo [Smart]
