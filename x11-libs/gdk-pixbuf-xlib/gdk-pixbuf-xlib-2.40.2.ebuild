@@ -27,7 +27,7 @@ BDEPEND="
 
 multilib_src_configure() {
 	local emesonargs=(
-		-Dgtk-doc="$(multilib_native_usex gtk-doc true false)"
+		-Dgtk_doc="$(multilib_native_usex gtk-doc true false)"
 	)
 	meson_src_configure
 }
