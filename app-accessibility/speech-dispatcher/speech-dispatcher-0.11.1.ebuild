@@ -7,7 +7,7 @@ inherit python-r1 systemd
 
 DESCRIPTION="Speech synthesis interface"
 HOMEPAGE="https://freebsoft.org/speechd"
-SRC_URI="https://github.com/brailcom/speechd/releases/download/0.11.0/speech-dispatcher-0.11.0.tar.gz -> speech-dispatcher-0.11.0.tar.gz"
+SRC_URI="https://github.com/brailcom/speechd/releases/download/0.11.1/speech-dispatcher-0.11.1.tar.gz -> speech-dispatcher-0.11.1.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
