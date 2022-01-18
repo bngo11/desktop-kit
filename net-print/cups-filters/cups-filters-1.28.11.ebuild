@@ -6,7 +6,7 @@ GENTOO_DEPEND_ON_PERL=no
 
 inherit autotools perl-module flag-o-matic
 
-SRC_URI="https://github.com/OpenPrinting/cups-filters/releases/download/1.28.10/cups-filters-1.28.10.tar.xz"
+SRC_URI="https://github.com/OpenPrinting/cups-filters/releases/download/1.28.11/cups-filters-1.28.11.tar.xz"
 KEYWORDS="*"
 DESCRIPTION="Cups filters"
 HOMEPAGE="https://wiki.linuxfoundation.org/openprinting/cups-filters"
@@ -52,7 +52,6 @@ src_prepare() {
 	default
 
 	if ! use test ; then
-		eapply "${FILESDIR}"/${PN}-1.28.2-make-missing-testfont-non-fatal.patch
 		need_eautoreconf=yes
 	fi
 
