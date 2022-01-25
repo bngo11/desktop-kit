@@ -7,7 +7,7 @@ inherit xdg
 MY_PN="${PN/tela/Tela}"
 DESCRIPTION="A flat colorful Design icon theme"
 HOMEPAGE="https://www.pling.com/p/1279924"
-SRC_URI="https://github.com/vinceliuice/tela-icon-theme/archive/2021-12-25.tar.gz -> tela-icon-theme-20211225.tar.gz"
+SRC_URI="https://github.com/vinceliuice/tela-icon-theme/archive/2022-01-25.tar.gz -> tela-icon-theme-20220125.tar.gz"
 LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="*"
@@ -17,7 +17,7 @@ RESTRICT="primaryuri"
 
 BDEPEND="dev-util/gtk-update-icon-cache"
 
-S="${WORKDIR}/${MY_PN}-2021-12-25"
+S="${WORKDIR}/${MY_PN}-2022-01-25"
 
 src_install() {
 	local colorvariant=(
