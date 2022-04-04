@@ -39,10 +39,6 @@ src_prepare() {
 		-e "/translate.check/d" \
 		Makefile.am || die
 
-	# https://github.com/espeak-ng/espeak-ng/issues/699
-	# fixed in master
-	sed -i -e "s/int samplerate;/static int samplerate;/" src/espeak-ng.c || die
-
 	eautoreconf
 }
 
