@@ -6,7 +6,7 @@ inherit autotools
 
 DESCRIPTION="Software speech synthesizer for English, and some other languages"
 HOMEPAGE="https://github.com/espeak-ng/espeak-ng"
-SRC_URI="https://github.com/espeak-ng/espeak-ng/archive/1.50.tar.gz -> espeak-ng-1.50.tar.gz"
+SRC_URI="https://github.com/espeak-ng/espeak-ng/archive/1.51.tar.gz -> espeak-ng-1.51.tar.gz"
 
 LICENSE="GPL-3+ Turkowski unicode"
 SLOT="0"
