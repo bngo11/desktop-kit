@@ -5,19 +5,16 @@ EAPI=7
 PYTHON_COMPAT=( python3+ )
 PYTHON_REQ_USE="threads(+),xml"
 
-# 14 and 15 spit out a lot of warnings about subdirs
-WANT_AUTOMAKE="1.13"
-
 inherit autotools linux-info python-single-r1 readme.gentoo-r1 udev
 
 DESCRIPTION="HP Linux Imaging and Printing - Print, scan, fax drivers and service tools"
 HOMEPAGE="https://developers.hp.com/hp-linux-imaging-and-printing"
 SRC_URI="mirror://sourceforge/hplip/${P}.tar.gz
-		https://dev.gentoo.org/~billie/distfiles/${PN}-3.21.4-patches-1.tar.xz"
+		https://dev.gentoo.org/~billie/distfiles/${PN}-3.22.2-patches-1.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="*"
+KEYWORDS="amd64 arm arm64 ppc ppc64 x86"
 
 IUSE="doc fax +hpcups hpijs kde libnotify libusb0 minimal parport policykit qt5 scanner +snmp static-ppds X"
 
@@ -36,7 +33,7 @@ COMMON_DEPEND="
 		snmp? (
 			dev-libs/openssl:0=
 			net-analyzer/net-snmp:=
-			net-dns/avahi[dbus,python,${PYTHON_USEDEP}]
+			net-dns/avahi[dbus,python,${PYTHON_SINGLE_USEDEP}]
 		)
 	)
 "
@@ -50,26 +47,28 @@ RDEPEND="
 	${COMMON_DEPEND}
 	app-text/ghostscript-gpl
 	!minimal? (
-		dev-python/pygobject:3[${PYTHON_USEDEP}]
+		$(python_gen_cond_dep 'dev-python/pygobject:3[${PYTHON_USEDEP}]' 'python3*')
 		kernel_linux? ( virtual/udev )
-		>=dev-python/dbus-python-1.2.0-r1[${PYTHON_USEDEP}]
-		dev-python/distro[${PYTHON_USEDEP}]
-		fax? ( dev-python/reportlab[${PYTHON_USEDEP}] )
-		qt5? (
-			>=dev-python/PyQt5-5.5.1[dbus,gui,widgets,${PYTHON_USEDEP}]
-			libnotify? ( dev-python/notify2[${PYTHON_USEDEP}] )
-		)
-		scanner? (
-			>=dev-python/reportlab-3.2[${PYTHON_USEDEP}]
-			>=dev-python/pillow-3.1.1[${PYTHON_USEDEP}]
-			X? (
-				|| (
-					kde? ( kde-misc/skanlite )
-					media-gfx/xsane
-					media-gfx/sane-frontends
+		$(python_gen_cond_dep '
+			>=dev-python/dbus-python-1.2.0-r1[${PYTHON_USEDEP}]
+			dev-python/distro[${PYTHON_USEDEP}]
+			fax? ( dev-python/reportlab[${PYTHON_USEDEP}] )
+			qt5? (
+				>=dev-python/PyQt5-5.5.1[dbus,gui,widgets,${PYTHON_USEDEP}]
+				libnotify? ( dev-python/notify2[${PYTHON_USEDEP}] )
+			)
+			scanner? (
+				>=dev-python/reportlab-3.2[${PYTHON_USEDEP}]
+				>=dev-python/pillow-3.1.1[${PYTHON_USEDEP}]
+				X? (
+					|| (
+						kde? ( kde-misc/skanlite )
+						media-gfx/xsane
+						media-gfx/sane-frontends
+					)
 				)
 			)
-		)
+		')
 	)
 	policykit? ( sys-auth/polkit )
 "
