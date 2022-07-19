@@ -8,7 +8,7 @@ inherit cmake python-single-r1
 
 DESCRIPTION="C++ implementation of 3mf loading with SIP python bindings"
 HOMEPAGE="https://github.com/Ultimaker/libSavitar"
-SRC_URI="https://github.com/Ultimaker/libSavitar/tarball/68f962081f382e7a5e40dbc7076eba9ca39f517e -> libSavitar-5.1-68f9620.tar.gz"
+SRC_URI="https://github.com/Ultimaker/libSavitar/tarball/04551ded3b1c7822bfb3fdee57ff6a1402f8610e -> libSavitar-5.1.0-04551de.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0/3"
