@@ -6,7 +6,7 @@ inherit cmake
 
 DESCRIPTION="FDM materials for media-gfx/cura"
 HOMEPAGE="https://github.com/Ultimaker/fdm_materials"
-SRC_URI="https://github.com/Ultimaker/fdm_materials/tarball/384ab9c22f3f32f0e0721dfda54a9db637967a2d -> fdm_materials-2019.08.21-384ab9c.tar.gz"
+SRC_URI="https://github.com/Ultimaker/fdm_materials/tarball/031b2cd7613af29a80a0244d052188d0a014a437 -> fdm_materials-5.1.0-031b2cd.tar.gz"
 
 LICENSE="CC0-1.0"
 SLOT="0"

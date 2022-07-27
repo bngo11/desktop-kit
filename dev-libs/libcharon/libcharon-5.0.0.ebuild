@@ -8,7 +8,7 @@ inherit cmake python-single-r1 user
 
 DESCRIPTION="This library facilitates communication between Cura and its backend"
 HOMEPAGE="https://github.com/Ultimaker/libCharon"
-SRC_URI="https://github.com/Ultimaker/libCharon/tarball/bfd36d06aebf8b2a0820e466065be8b0cfe6db4e -> libCharon-2020.03.06-bfd36d0.tar.gz"
+SRC_URI="https://github.com/Ultimaker/libCharon/tarball/e0f2f53a5357795daf9d44565919a61956ff6f90 -> libCharon-5.0.0-e0f2f53.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
