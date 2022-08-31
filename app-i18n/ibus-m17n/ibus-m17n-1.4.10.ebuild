@@ -1,9 +1,8 @@
-# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="7"
 
-inherit gnome2-utils xdg
+inherit gnome3-utils xdg
 
 DESCRIPTION="M17N engine for IBus"
 HOMEPAGE="https://github.com/ibus/ibus/wiki"
@@ -11,7 +10,7 @@ SRC_URI="https://github.com/ibus/ibus-m17n/releases/download/1.4.10/ibus-m17n-1.
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="*"
 IUSE="gtk nls"
 
 DEPEND="app-i18n/ibus
@@ -31,15 +30,15 @@ src_configure() {
 
 pkg_preinst() {
 	xdg_pkg_preinst
-	gnome2_schemas_savelist
+	gnome3_schemas_savelist
 }
 
 pkg_postinst() {
 	xdg_pkg_postinst
-	gnome2_schemas_update
+	gnome3_schemas_update
 }
 
 pkg_postrm() {
 	xdg_pkg_postrm
-	gnome2_schemas_update
+	gnome3_schemas_update
 }

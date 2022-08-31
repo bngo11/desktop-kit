@@ -1,19 +1,18 @@
-# Copyright 2008-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 LUA_COMPAT=( lua5-1 )
-PYTHON_COMPAT=( python3_{8..10} )
+PYTHON_COMPAT=( python3+ )
 
 inherit autotools lua-single python-single-r1
 
 DESCRIPTION="Chinese Pinyin and Bopomofo engines for IBus"
 HOMEPAGE="https://github.com/ibus/ibus-pinyin"
-SRC_URI="https://api.github.com/repos/ibus/ibus-pinyin/tarball/refs/tags/1.5.0 -> ibus-pinyin-1.5.0.tar.gz"
+SRC_URI="https://github.com/ibus/ibus-pinyin/tarball/eecbc1dab658acea9304c1434585669660e76689 -> ibus-pinyin-1.5.0-eecbc1d.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="*"
 IUSE="boost lua nls"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
 	lua? ( ${LUA_REQUIRED_USE} )"

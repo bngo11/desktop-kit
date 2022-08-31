@@ -1,4 +1,3 @@
-# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="7"
@@ -11,11 +10,11 @@ HOMEPAGE="https://github.com/ibus/ibus/wiki"
 # SRC_URI="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/ibus/${P}.tar.gz"
 # This raises another question: Will I maintain it? Idk it seems unmaintained everywhere I looked so probably not but
 # who knows I might add some words if needed
-SRC_URI="https://github.com/Madman10K/ibus-table-extraphrase/archive/refs/tags/v1.3.9.20110826.tar.gz -> ibus-table-extraphrase-1.3.9.20110826.tar.gz"
+SRC_URI="https://github.com/Madman10K/ibus-table-extraphrase/releases/download/v1.3.9.20110826/ibus-table-extraphrase-1.3.9.20110826.tar.gz -> ibus-table-extraphrase-1.3.9.20110826.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="*"
 IUSE=""
 
 RDEPEND="app-i18n/ibus-table"

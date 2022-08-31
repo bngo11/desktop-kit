@@ -1,4 +1,3 @@
-# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 EAPI="7"
 CMAKE_IN_SOURCE_BUILD="1"
@@ -12,7 +11,7 @@ SRC_URI="https://github.com/mike-fabian/ibus-table-chinese/releases/download/1.8
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="*"
 IUSE=""
 
 RDEPEND="app-i18n/ibus-table"

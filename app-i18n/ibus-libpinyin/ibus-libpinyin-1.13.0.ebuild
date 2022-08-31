@@ -1,9 +1,8 @@
-# Copyright 2015-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 LUA_COMPAT=( lua5-{1..3} )
-PYTHON_COMPAT=( python3_{8..10} )
+PYTHON_COMPAT=( python3+ )
 
 inherit autotools gnome2-utils lua-single python-single-r1
 
@@ -13,7 +12,7 @@ SRC_URI="https://github.com/libpinyin/ibus-libpinyin/releases/download/1.13.0/ib
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="*"
 IUSE="boost lua opencc"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
 	lua? ( ${LUA_REQUIRED_USE} )"

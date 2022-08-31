@@ -1,8 +1,7 @@
-# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="7"
-PYTHON_COMPAT=( python3_{8..10} )
+PYTHON_COMPAT=( python3+ )
 PYTHON_REQ_USE="sqlite(+)"
 
 inherit gnome2-utils python-single-r1 xdg
@@ -13,7 +12,7 @@ SRC_URI="https://github.com/kaio/ibus-table/releases/download/1.16.11/ibus-table
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="*"
 IUSE="nls"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
