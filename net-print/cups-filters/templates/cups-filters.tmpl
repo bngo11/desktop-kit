@@ -26,6 +26,7 @@ RDEPEND="
 	media-libs/fontconfig
 	media-libs/freetype:2
 	media-libs/lcms:2
+	media-libs/libexif
 	>=net-print/cups-2.2.2
 	!<=net-print/cups-1.5.9999
 	sys-devel/bc
