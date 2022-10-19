@@ -8,7 +8,7 @@ inherit cmake python-single-r1
 
 DESCRIPTION="This library facilitates communication between Cura and its backend"
 HOMEPAGE="https://github.com/Ultimaker/libArcus"
-SRC_URI="https://github.com/Ultimaker/libArcus/tarball/1d80799bc9828cbfe38dabf89f9aae06ccce6f6e -> libArcus-5.1.0-1d80799.tar.gz"
+SRC_URI="https://github.com/Ultimaker/libArcus/tarball/7b20180a727fea775f208f97c9490d5a259b981a -> libArcus-5.2.0-7b20180.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0/3"

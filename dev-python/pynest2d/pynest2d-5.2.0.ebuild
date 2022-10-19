@@ -8,7 +8,7 @@ inherit cmake python-single-r1
 
 DESCRIPTION="Python bindings for libnest2d"
 HOMEPAGE="https://github.com/Ultimaker/pynest2d"
-SRC_URI="https://github.com/Ultimaker/pynest2d/tarball/52ab9cd91aaeefaa810537f5b85a8f8533866629 -> pynest2d-5.1.0-52ab9cd.tar.gz"
+SRC_URI="https://github.com/Ultimaker/pynest2d/tarball/faff603b24682e20066db048a8b1805853211e42 -> pynest2d-5.2.0-faff603.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
