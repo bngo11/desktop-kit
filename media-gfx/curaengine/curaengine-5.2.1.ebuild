@@ -6,7 +6,7 @@ inherit cmake
 
 DESCRIPTION="A 3D model slicing engine for 3D printing"
 HOMEPAGE="https://github.com/Ultimaker/CuraEngine"
-SRC_URI="https://github.com/Ultimaker/CuraEngine/tarball/225e9c82758e076cdaf4cdc1ba7d5366197e9fd3 -> CuraEngine-5.2.0-225e9c8.tar.gz"
+SRC_URI="https://github.com/Ultimaker/CuraEngine/tarball/1363b817eed41108acac22b760e338292678889d -> CuraEngine-5.2.1-1363b81.tar.gz"
 
 LICENSE="AGPL-3"
 SLOT="0"
