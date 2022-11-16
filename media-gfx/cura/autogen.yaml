@@ -2,7 +2,7 @@ ultimaker_rule:
   generator: github-1
   defaults:
     python_compat: python3+
-    #    select: '4.13' # cmake-3.20 is required for versions >= 5
+    # select: '4.13' # cmake-3.20 is required for versions >= 5
     github:
       user: Ultimaker
       query: tags
