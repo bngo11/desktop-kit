@@ -1,8 +1,7 @@
-# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
-inherit autotools gnome2-utils savedconfig
+EAPI=7
+inherit autotools gnome3-utils savedconfig
 
 DESCRIPTION="Canonical's on-screen-display notification agent"
 HOMEPAGE="https://launchpad.net/notify-osd"
@@ -10,7 +9,7 @@ SRC_URI="https://launchpad.net/${PN}/precise/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="*"
 IUSE="minimal"
 
 COMMON_DEPEND="
@@ -29,7 +28,6 @@ RDEPEND="${COMMON_DEPEND}
 	!minimal? ( x11-themes/notify-osd-icons )
 "
 DEPEND="${COMMON_DEPEND}
-	dev-util/glib-utils
 	gnome-base/gnome-common
 	x11-base/xorg-proto
 	virtual/pkgconfig
@@ -56,16 +54,16 @@ src_install() {
 }
 
 pkg_preinst() {
-	gnome2_icon_savelist
-	gnome2_schemas_savelist
+	gnome3_icon_savelist
+	gnome3_schemas_savelist
 }
 
 pkg_postinst() {
-	gnome2_icon_cache_update
-	gnome2_schemas_update
+	gnome3_icon_cache_update
+	gnome3_schemas_update
 }
 
 pkg_postrm() {
-	gnome2_icon_cache_update
-	gnome2_schemas_update
+	gnome3_icon_cache_update
+	gnome3_schemas_update
 }
