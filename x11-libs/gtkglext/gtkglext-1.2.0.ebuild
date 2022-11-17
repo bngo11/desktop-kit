@@ -22,7 +22,6 @@ RDEPEND="
 	>=virtual/opengl-7.0-r1
 "
 DEPEND="${RDEPEND}
-	dev-util/glib-utils
 	>=sys-devel/autoconf-archive-2014.02.28
 	>=virtual/pkgconfig-0-r1
 "
