@@ -126,6 +126,8 @@ src_prepare() {
 	for x in "${fixtestfiles[@]}"; do
 		sed -i -e "s|\"/tmp/|\"${T}/|g" "${S}/${x}" || die "sed of "${S}/${x}" failed"
 	done
+
+	sed -i -e "s/webkit2gtk-4.0/webkit2gtk-4.1/" CMakeLists.txt || die
 }
 
 src_configure() {
