@@ -8,7 +8,7 @@ inherit cmake desktop python-single-r1 xdg
 
 DESCRIPTION="A 3D model slicing application for 3D printing"
 HOMEPAGE="https://github.com/Ultimaker/Cura"
-SRC_URI="https://github.com/Ultimaker/Cura/tarball/ec9dcc43b4f514ae8e42dd64185da4cee70d7fa7 -> Cura-5.2.1-ec9dcc4.tar.gz"
+SRC_URI="https://github.com/Ultimaker/Cura/tarball/62fa625dd61e4bf89d877e5890c1c37bbe589cf9 -> Cura-5.2.2-62fa625.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
