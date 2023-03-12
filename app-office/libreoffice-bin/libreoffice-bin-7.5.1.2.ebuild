@@ -22,7 +22,7 @@ BIN_COMMON_DEPEND="
 	=app-text/libmwaw-0.3*
 	>=dev-libs/icu-64.2
 	>=media-gfx/graphite2-1.3.10
-	media-libs/harfbuzz:0/4.0.0[graphite,icu]
+	media-libs/harfbuzz:0[graphite,icu]
 	media-libs/libpng:0/16
 	>=sys-devel/gcc-8.3.0
 	>=sys-libs/glibc-2.29
