@@ -8,6 +8,8 @@ kitty_rule:
       # Use official release tarball which has some pre-generated docs, avoiding deps:
       tarball: kitty-{version}.tar.xz
   packages:
-    - kitty
+    - kitty:
+        extensions:
+          - golang
     - kitty-terminfo
     - kitty-shell-integration
