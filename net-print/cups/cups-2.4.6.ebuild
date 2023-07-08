@@ -2,7 +2,7 @@
 
 EAPI=7
 
-inherit autotools linux-info xdg multilib-minimal optfeature pam toolchain-funcs
+inherit autotools linux-info xdg multilib-minimal optfeature pam toolchain-funcs user systemd
 
 MY_PV="${PV/_beta/b}"
 MY_PV="${MY_PV/_rc/rc}"
