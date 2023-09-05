@@ -61,7 +61,6 @@ RDEPEND="
 	media-fonts/liberation-fonts
 	java? ( >=virtual/jre-1.6 )
 	gtk? (
-		dev-libs/atk
 		x11-libs/cairo
 		x11-libs/gdk-pixbuf
 		x11-libs/gtk+
