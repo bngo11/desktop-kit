@@ -9,7 +9,9 @@ inherit autotools linux-info python-single-r1 readme.gentoo-r1 udev
 
 DESCRIPTION="HP Linux Imaging and Printing - Print, scan, fax drivers and service tools"
 HOMEPAGE="https://developers.hp.com/hp-linux-imaging-and-printing"
-SRC_URI="https://sourceforge.net/projects/hplip/files/hplip/3.23.12/hplip-3.23.12.tar.gz -> hplip-3.23.12.tar.gz"
+SRC_URI="https://sourceforge.net/projects/hplip/files/hplip/3.23.12/hplip-3.23.12.tar.gz -> hplip-3.23.12.tar.gz
+https://dev.gentoo.org/~billie/distfiles/hplip-3.23.12-patches-1.tar.xz -> hplip-3.23.12-patches-1.tar.xz
+"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -31,7 +33,7 @@ COMMON_DEPEND="
 		)
 		snmp? (
 			dev-libs/openssl:0=
-			net-analyzer/net-snmp:=
+			net-analyzer/net-snmp:=[${PYTHON_SINGLE_USEDEP}]
 			net-dns/avahi[dbus,python,${PYTHON_SINGLE_USEDEP}]
 		)
 	)
@@ -74,7 +76,7 @@ RDEPEND="
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-PATCHES=( "${FILESDIR}" )
+PATCHES=( "${WORKDIR}/patches" )
 
 CONFIG_CHECK="~PARPORT ~PPDEV"
 ERROR_PARPORT="Please make sure kernel parallel port support is enabled (PARPORT and PPDEV)."
