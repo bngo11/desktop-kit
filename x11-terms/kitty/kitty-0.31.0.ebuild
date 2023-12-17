@@ -98,7 +98,7 @@ EGO_SUM=(
 go-module_set_globals
 
 SRC_URI="https://github.com/kovidgoyal/kitty/releases/download/v0.31.0/kitty-0.31.0.tar.xz -> kitty-0.31.0.tar.xz
-https://direct.funtoo.org/7a/83/72/7a8372bebc31c357201b353d541ebf1718121712d25131d4bf19cf3abc0681e156877b60f9ac1e911055c12a55f7c6cf029dd077917f3c45f2a20f5e76fbdfe0 -> kitty-0.31.0-funtoo-go-bundle-53b2bfe717cce67b320b8946b9c35e0d0648a1b0586074d146984743790b3ec89548fc2f3c45b4fdeeba28b11f52e9ed702e46039b9bb344e89165d8eecf279e.tar.gz"
+https://direct.funtoo.org/f5/5f/89/f55f89dc55d1983e10209e8a7f039d4917fc25e2eb41b2d2c960a3772b92a89de2440832138478102ededbf569495a6c2a529d5c8bcc44345268aa3a8a270702 -> kitty-0.31.0-funtoo-go-bundle-53b2bfe717cce67b320b8946b9c35e0d0648a1b0586074d146984743790b3ec89548fc2f3c45b4fdeeba28b11f52e9ed702e46039b9bb344e89165d8eecf279e.tar.gz"
 KEYWORDS="next"
 
 DESCRIPTION="Cross-platform, fast, feature-rich, GPU based terminal"
