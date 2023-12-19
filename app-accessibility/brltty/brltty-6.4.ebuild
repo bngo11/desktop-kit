@@ -14,7 +14,7 @@ SRC_URI="http://brltty.com/archive/${P}.tar.xz"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="*"
-IUSE="+api +beeper bluetooth +contracted-braille doc +fm gpm iconv icu
+IUSE="+api +beeper bluetooth doc +fm gpm iconv icu
 		java +midi ncurses nls ocaml +pcm python usb +speech
 		tcl X"
 REQUIRED_USE="doc? ( api )
@@ -81,7 +81,6 @@ src_configure() {
 		--without-espeak
 		$(use_enable api)
 		$(use_with beeper beep-package)
-		$(use_enable contracted-braille)
 		$(use_with fm fm-package)
 		$(use_enable gpm)
 		$(use_enable iconv)
