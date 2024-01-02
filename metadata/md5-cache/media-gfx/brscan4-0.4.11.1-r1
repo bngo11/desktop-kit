@@ -1,5 +1,5 @@
 DEFINED_PHASES=install postinst unpack
-DEPEND=>=app-arch/rpm2targz-9.0.0.3g
+DEPEND=app-arch/rpm
 DESCRIPTION=Brother scanner driver
 EAPI=7
 HOMEPAGE=https://www.brother.com/
@@ -10,5 +10,5 @@ RDEPEND=media-gfx/sane-backends sys-libs/glibc virtual/libusb:0 zeroconf? ( net-
 RESTRICT=strip
 SLOT=0
 SRC_URI=amd64? ( https://download.brother.com/welcome/dlf105203/brscan4-0.4.11-1.x86_64.rpm ) x86? ( https://download.brother.com/welcome/dlf105202/brscan4-0.4.11-1.i386.rpm )
-_eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8	readme.gentoo-r1	22ae82e140bdd95d17a34fd5fd733190	rpm	f52cfa3a435468d86d3b49c357b9cb35
+_eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8	readme.gentoo-r1	22ae82e140bdd95d17a34fd5fd733190	rpm	30c5bec2068729a9bcb52ddcc16d88e8
 _md5_=6a6f5e3b9a4e50d96b05d85b2a004671
