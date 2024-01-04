@@ -2,7 +2,7 @@
 
 EAPI=7
 
-inherit readme.gentoo-r1 rpm
+inherit readme.gentoo-r1 rpm eapi8-dosym
 
 MY_P="${PN}-${PV%.*}-${PV##*.}"
 DESCRIPTION="Brother scanner driver"
@@ -32,13 +32,13 @@ src_install() {
 	insinto /etc${dest}
 	doins Brsane4.ini brsanenetdevice4.cfg
 	doins -r models4
-	dosym -r {/etc,}${dest}/Brsane4.ini
-	dosym -r {/etc,}${dest}/brsanenetdevice4.cfg
-	dosym -r {/etc,}${dest}/models4
+	dosym8 -r {/etc,}${dest}/Brsane4.ini
+	dosym8 -r {/etc,}${dest}/brsanenetdevice4.cfg
+	dosym8 -r {/etc,}${dest}/models4
 
 	exeinto ${dest}
 	doexe brsaneconfig4
-	dosym -r {${dest},/usr/bin}/brsaneconfig4
+	dosym8 -r {${dest},/usr/bin}/brsaneconfig4
 
 	if use zeroconf; then
 		doexe brscan_cnetconfig
@@ -49,7 +49,7 @@ src_install() {
 	dolib.so "${WORKDIR}"/usr/${lib}/sane/libsane-brother4.so.1.0.7
 	dosym libsane-brother4.so.1.0.7 ${dest}/${lib}/libsane-brother4.so.1
 	dosym libsane-brother4.so.1.0.7 ${dest}/${lib}/libsane-brother4.so
-	dosym -r {${dest}/${lib},/usr/${lib}/sane}/libsane-brother4.so.1.0.7
+	dosym8 -r {${dest}/${lib},/usr/${lib}/sane}/libsane-brother4.so.1.0.7
 	dosym libsane-brother4.so.1.0.7 /usr/${lib}/sane/libsane-brother4.so.1
 	dosym libsane-brother4.so.1.0.7 /usr/${lib}/sane/libsane-brother4.so
 

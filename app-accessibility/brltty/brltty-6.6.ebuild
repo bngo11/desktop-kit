@@ -133,7 +133,7 @@ src_install() {
 		findlib_src_preinst
 	fi
 
-	emake OCAML_LDCONF= install
+	emake -j1 INSTALL_ROOT="${D}" OCAML_LDCONF= install
 
 	if use python; then
 		python_install() {
@@ -152,24 +152,12 @@ src_install() {
 
 	insinto /etc
 	doins Documents/brltty.conf
-	udev_newrules Autostart/Udev/device.rules 70-brltty.rules
-	udev_newrules Autostart/Udev/uinput.rules 70-uinput.rules
 	newinitd "${FILESDIR}"/brltty.rc brltty
+	emake -C Autostart/Udev install
 
-	libdir="$(get_libdir)"
-	mkdir -p "${D}"/usr/${libdir}/
-	mv "${D}"/${libdir}/*.a "${D}"/usr/${libdir}/
-	gen_usr_ldscript libbrlapi.so
-
-	cd doc
-	mv Manual-BRLTTY/English/BRLTTY.txt BRLTTY-en.txt
-	mv Manual-BRLTTY/French/BRLTTY.txt BRLTTY-fr.txt
-	mv Manual-BrlAPI/English/BrlAPI.txt BrlAPI-en.txt
-	dodoc CONTRIBUTORS ChangeLog HISTORY README* TODO BRLTTY-*.txt
-	dohtml -r Manual-BRLTTY
+	dodoc Documents/{CONTRIBUTORS,ChangeLog,HISTORY,README*,TODO}
 	if use doc; then
-		dohtml -r Manual-BrlAPI
-		dodoc BrlAPI-*.txt
+		HTML_DOCS="doc/Manual-BRLTTY" einstalldocs
 	fi
 
 	keepdir /var/lib/brlapi
