@@ -1,4 +1,4 @@
-BDEPEND=app-arch/xz-utils >=dev-util/intltool-0.40 sys-devel/gettext virtual/pkgconfig doc? ( dev-util/gtk-doc ) vala? ( || ( dev-lang/vala:0.56 dev-lang/vala:0.54 dev-lang/vala:0.52 dev-lang/vala:0.50 dev-lang/vala:0.48 dev-lang/vala:0.46 dev-lang/vala:0.44 dev-lang/vala:0.42 dev-lang/vala:0.40 dev-lang/vala:0.36 ) ) >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+BDEPEND=app-arch/xz-utils >=dev-util/intltool-0.40 sys-devel/gettext virtual/pkgconfig doc? ( dev-util/gtk-doc ) vala? ( || ( dev-lang/vala:0.56 dev-lang/vala:0.54 dev-lang/vala:0.52 dev-lang/vala:0.50 dev-lang/vala:0.48 dev-lang/vala:0.46 dev-lang/vala:0.44 dev-lang/vala:0.42 dev-lang/vala:0.40 dev-lang/vala:0.36 ) ) >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
 DEFINED_PHASES=configure install postinst postrm preinst prepare
 DEPEND=>=dev-libs/glib-2.18:2 >=lxde-base/menu-cache-1.1.0-r1:= ~x11-libs/libfm-extra-1.3.2 gtk? ( x11-libs/gtk+:3 ) udisks? ( dev-libs/dbus-glib ) dev-util/desktop-file-utils x11-misc/shared-mime-info
 DESCRIPTION=Library for file management
@@ -11,5 +11,5 @@ RDEPEND=>=dev-libs/glib-2.18:2 >=lxde-base/menu-cache-1.1.0-r1:= ~x11-libs/libfm
 REQUIRED_USE=udisks? ( automount ) doc? ( gtk )
 SLOT=0/5.3.1
 SRC_URI=https://github.com/lxde/libfm/archive/1.3.2.tar.gz -> libfm-1.3.2.tar.gz
-_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	vala	0d88994d5c4b9e57aa506a691ddcb67a	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	14d00d009167652b1fa363e55effe213
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	vala	0d88994d5c4b9e57aa506a691ddcb67a	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	14d00d009167652b1fa363e55effe213
 _md5_=606393c03868959ad051db301ab75379
