@@ -48,7 +48,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	net-print/cups
 	sys-libs/zlib[minizip]
 	virtual/jpeg:0=
-	>=x11-libs/cairo-1.10.0[X,svg]
+	>=x11-libs/cairo-1.10.0[X]
 	boost? ( >=dev-libs/boost-1.62:= )
 	hunspell? ( app-text/hunspell:= )
 	graphicsmagick? ( media-gfx/graphicsmagick:= )

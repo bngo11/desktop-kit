@@ -47,7 +47,7 @@ DEPEND="${PYTHON_DEPS}
 	net-print/cups
 	sys-libs/zlib[minizip]
 	virtual/jpeg:0=
-	x11-libs/cairo[X,svg]
+	x11-libs/cairo[X]
 	boost? ( dev-libs/boost:= )
 	graphicsmagick? ( media-gfx/graphicsmagick:= )
 	hunspell? ( app-text/hunspell:= )
