@@ -4,26 +4,29 @@ EAPI=7
 
 PYTHON_COMPAT=( python3+ )
 PYTHON_REQ_USE="tk?"
-inherit cmake-utils desktop flag-o-matic python-single-r1 xdg
+inherit cmake desktop flag-o-matic optfeature python-single-r1 xdg
 
 DESCRIPTION="Desktop publishing (DTP) and layout program"
 HOMEPAGE="https://www.scribus.net/"
-SRC_URI="mirror://sourceforge/project/${PN}/${PN}-devel/${PV}/${P}.tar.xz"
+SRC_URI="mirror://sourceforge/project/${PN}/${PN}/${PV}/${P}.tar.xz"
+S="${WORKDIR}/${P}"
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="$(ver_cut 1-2)"
 KEYWORDS="*"
 IUSE="+boost debug examples graphicsmagick hunspell +minimal osg +pdf scripts +templates tk"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
 	tk? ( scripts )"
 
-COMMON_DEPEND="${PYTHON_DEPS}
+# osg
+# couple of third_party libs bundled
+DEPEND="${PYTHON_DEPS}
 	app-text/libmspub
 	app-text/libqxp
 	app-text/poppler:=
 	dev-libs/hyphen
-	>=dev-libs/icu-58.2:0=
+	dev-libs/icu:0=
 	dev-libs/librevenge
 	dev-libs/libxml2
 	dev-qt/qtcore:5
@@ -33,68 +36,53 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	dev-qt/qtprintsupport:5
 	dev-qt/qtwidgets:5
 	dev-qt/qtxml:5
-	dev-qt/qtwidgets:5
 	media-libs/fontconfig
 	media-libs/freetype:2
-	>=media-libs/harfbuzz-0.9.42:0=[icu]
+	media-libs/harfbuzz:0=[icu]
 	media-libs/lcms:2
 	media-libs/libcdr
 	media-libs/libfreehand
+	media-libs/libjpeg-turbo:=
 	media-libs/libpagemaker
 	media-libs/libpng:0=
 	media-libs/libvisio
 	media-libs/libzmf
-	media-libs/tiff:0
+	media-libs/tiff:=
 	net-print/cups
 	sys-libs/zlib[minizip]
-	virtual/jpeg:0=
-	>=x11-libs/cairo-1.10.0[X]
-	boost? ( >=dev-libs/boost-1.62:= )
-	hunspell? ( app-text/hunspell:= )
+	x11-libs/cairo[X,svg(+)]
+	boost? ( dev-libs/boost:= )
 	graphicsmagick? ( media-gfx/graphicsmagick:= )
+	hunspell? ( app-text/hunspell:= )
 	osg? ( dev-games/openscenegraph:= )
 	pdf? ( app-text/podofo:0= )
-	scripts? ( dev-python/pillow[tk?,${PYTHON_USEDEP}] )
+	scripts? (
+		$(python_gen_cond_dep '
+			dev-python/pillow[tk?,${PYTHON_USEDEP}]
+		')
+	)
 "
-RDEPEND="${COMMON_DEPEND}
+RDEPEND="${DEPEND}
 	app-text/ghostscript-gpl
 "
-DEPEND="${COMMON_DEPEND}
+BDEPEND="
 	dev-qt/linguist-tools:5
 	virtual/pkgconfig
 "
 
 PATCHES=(
-	# non(?)-upstreamable
+	"${FILESDIR}"/${PN}-1.5.8-cmake.patch # bug 886251
 	"${FILESDIR}"/${PN}-1.5.3-fpic.patch
-	"${FILESDIR}"/${PN}-1.5.6-docdir.patch
-	"${FILESDIR}"/${PN}-1.5.5-findhyphen-1.patch
-	"${FILESDIR}"/${PN}-1.5.6-findhyphen.patch
+	"${FILESDIR}"/${PN}-1.6.1-findhyphen.patch
+	"${FILESDIR}"/${PN}-1.7.0-remove-hello-world-test.patch
+	"${FILESDIR}"/${PN}-1.7.0-fix-icon-version.patch
 )
 
-CMAKE_BUILD_TYPE="Release"
-
-S="${WORKDIR}/${P}"
-
 src_prepare() {
-	cmake-utils_src_prepare
-	
-	rm -r codegen/cheetah scribus/third_party/hyphen || die
+	cmake_src_prepare
 
-	sed \
-		-e "/^\s*unzip\.[ch]/d" \
-		-e "/^\s*ioapi\.[ch]/d" \
-		-i scribus/CMakeLists.txt Scribus.pro || die
-	rm scribus/ioapi.[ch] || die
-
-	sed \
-		-e 's:\(${CMAKE_INSTALL_PREFIX}\):./\1:g' \
-		-i resources/templates/CMakeLists.txt || die
-
-	sed \
-		-e "/^add_subdirectory(ui\/qml)/s/^/#DONT/" \
-		-i scribus/CMakeLists.txt || die # nothing but a bogus Hello World test
-
+	# for safety remove files that we patched out
+	rm -r scribus/third_party/hyphen || die
 }
 
 src_configure() {
@@ -102,8 +90,10 @@ src_configure() {
 	append-cppflags -DHAVE_MEMRCHR
 
 	local mycmakeargs=(
+		-DTAG_VERSION="-${SLOT}"
 		-DHAVE_PYTHON=ON
 		-DWANT_DISTROBUILD=ON
+		-DWANT_CPP17=ON
 		-DDOCDIR="${EPREFIX}"/usr/share/doc/${PF}/
 		-DPython3_EXECUTABLE="${PYTHON}"
 		-DWITH_BOOST=$(usex boost)
@@ -116,20 +106,20 @@ src_configure() {
 		-DWITH_PODOFO=$(usex pdf)
 		-DWANT_NOTEMPLATES=$(usex !templates)
 	)
-	cmake-utils_src_configure
+	cmake_src_configure
 }
 
 src_install() {
-	cmake-utils_src_install
+	cmake_src_install
 
 	if ! use tk; then
-		rm "${ED}"/usr/share/scribus/scripts/{FontSample,CalendarWizard}.py || die
+		rm "${ED}"/usr/share/scribus-${SLOT}/scripts/{FontSample,CalendarWizard}.py || die
 	fi
 	if use scripts; then
-		python_fix_shebang "${ED}"/usr/share/scribus/scripts
-		python_optimize "${ED}"/usr/share/scribus/scripts
+		python_fix_shebang "${ED}"/usr/share/scribus-${SLOT}/scripts
+		python_optimize "${ED}"/usr/share/scribus-${SLOT}/scripts
 	else
-		rm "${ED}"/usr/share/scribus/scripts/*.py || die
+		rm "${ED}"/usr/share/scribus-${SLOT}/scripts/*.py || die
 	fi
 
 	mv "${ED}"/usr/share/doc/${PF}/{en,html} || die
@@ -145,9 +135,15 @@ src_install() {
 
 	local size
 	for size in 16 32 128 256 512; do
-		newicon -s $size resources/iconsets/artwork/icon_${size}x${size}.png scribus.png
+		newicon -s $size resources/iconsets/artwork/icon_${size}x${size}.png scribus-${SLOT}.png
 	done
-	newicon -s 64 resources/iconsets/artwork/icon_32x32@2x.png scribus.png
-	doicon resources/iconsets/*/scribus.png
-	domenu scribus.desktop
+	newicon -s 64 resources/iconsets/artwork/icon_32x32@2x.png scribus-${SLOT}.png
+	newicon resources/iconsets/1_5_1/scribus.png scribus-${SLOT}.png
+	newmenu scribus.desktop scribus-${SLOT}.desktop
+}
+
+pkg_postinst() {
+	xdg_pkg_postinst
+
+	optfeature "MS Word .doc file import filter support" app-text/antiword
 }
