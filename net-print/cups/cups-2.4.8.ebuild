@@ -9,7 +9,7 @@ MY_PV="${MY_PV/_rc/rc}"
 MY_PV="${MY_PV/_p/op}"
 MY_P="${PN}-${MY_PV}"
 
-SRC_URI="https://github.com/OpenPrinting/cups/releases/download/v2.4.7/cups-2.4.7-source.tar.gz -> cups-2.4.7-source.tar.gz"
+SRC_URI="https://github.com/OpenPrinting/cups/releases/download/v2.4.8/cups-2.4.8-source.tar.gz -> cups-2.4.8-source.tar.gz"
 KEYWORDS="*"
 
 S="${WORKDIR}/${MY_P}"
