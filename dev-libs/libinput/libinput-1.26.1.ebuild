@@ -7,10 +7,10 @@ inherit meson python-any-r1 udev
 
 DESCRIPTION="Library to handle input devices in Wayland"
 HOMEPAGE="https://www.freedesktop.org/wiki/Software/libinput/ https://gitlab.freedesktop.org/libinput/libinput"
-SRC_URI="https://gitlab.freedesktop.org/${PN}/${PN}/-/archive/${PV}/${P}.tar.gz"
+SRC_URI=" https://gitlab.freedesktop.org/libinput/libinput/-/archive/1.26.1/libinput-1.26.1.tar.bz2 -> libinput-1.26.1.tar.bz2 "
 
 LICENSE="MIT"
-SLOT="0/10"
+SLOT="0"
 KEYWORDS="*"
 IUSE="doc input_devices_wacom"
 # Tests require write access to udev rules directory which is a no-no for live system.
