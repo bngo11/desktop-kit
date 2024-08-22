@@ -7,7 +7,7 @@ inherit meson python-any-r1 udev
 
 DESCRIPTION="Library to handle input devices in Wayland"
 HOMEPAGE="https://www.freedesktop.org/wiki/Software/libinput/ https://gitlab.freedesktop.org/libinput/libinput"
-SRC_URI=" https://gitlab.freedesktop.org/libinput/libinput/-/archive/1.26.1/libinput-1.26.1.tar.bz2 -> libinput-1.26.1.tar.bz2 "
+SRC_URI=" https://gitlab.freedesktop.org/libinput/libinput/-/archive/1.26.2/libinput-1.26.2.tar.bz2 -> libinput-1.26.2.tar.bz2 "
 
 LICENSE="MIT"
 SLOT="0"
