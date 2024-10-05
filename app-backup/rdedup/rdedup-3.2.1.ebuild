@@ -7,7 +7,7 @@ inherit cargo
 DESCRIPTION="Data deduplication engine, supporting optional compression and public key encryption."
 HOMEPAGE="https://github.com/dpc/rdedup"
 SRC_URI="https://github.com/dpc/rdedup/tarball/12644270238087db087159bfc7e60df125fb5427 -> rdedup-3.2.1-1264427.tar.gz
-https://direct.funtoo.org/6f/f8/c8/6ff8c8f01cee0b4a06d4ccda3d4608060c70f4f46b322d5ed0f7d8e2e7b3843d14ac976350294cd146a72d0907385ab1800c81bd0aefa894c149df33f2b95889 -> rdedup-3.2.1-funtoo-crates-bundle-cd2c6493512d400eab2d3b9025f07e8f0349979ca1bbb96c2bd61ca1995c04a37b8bb39d1e3aff5d96706a61752fb1926ff69df33500fb3c5986da420fd6a371.tar.gz"
+https://direct.funtoo.org/11/bf/6d/11bf6d96f3c7de58ccfbdcb0eb3b9a0dfa7f43e7a601ac010e0662e4354d699a62386b9471c8457c4982e3092b45d10b5b65472f79fb9471982cc499edafd484 -> rdedup-3.2.1-funtoo-crates-bundle-cd2c6493512d400eab2d3b9025f07e8f0349979ca1bbb96c2bd61ca1995c04a37b8bb39d1e3aff5d96706a61752fb1926ff69df33500fb3c5986da420fd6a371.tar.gz"
 
 LICENSE="Apache-2.0 BSD ISC MIT MPL-2.0 Unlicense"
 SLOT="0"
