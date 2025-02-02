@@ -14,8 +14,8 @@ EGO_SUM=(
 	"github.com/alecthomas/chroma/v2 v2.15.0/go.mod"
 	"github.com/alecthomas/repr v0.4.0"
 	"github.com/alecthomas/repr v0.4.0/go.mod"
-	"github.com/bmatcuk/doublestar/v4 v4.7.1"
-	"github.com/bmatcuk/doublestar/v4 v4.7.1/go.mod"
+	"github.com/bmatcuk/doublestar/v4 v4.8.1"
+	"github.com/bmatcuk/doublestar/v4 v4.8.1/go.mod"
 	"github.com/davecgh/go-spew v1.1.1"
 	"github.com/davecgh/go-spew v1.1.1/go.mod"
 	"github.com/disintegration/imaging v1.6.2"
@@ -91,8 +91,8 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://github.com/kovidgoyal/kitty/releases/download/v0.39.0/kitty-0.39.0.tar.xz -> kitty-0.39.0.tar.xz
-https://direct.funtoo.org/d6/6e/8c/d66e8cfc8751b75e0df25e7d2f4eacae178bf2eaaf410d6a773acaf5f46afbcbe2dcf116a3cf115d3777c38bffa6323bf5cc4623e77721b8ed7f39a9eaca795a -> kitty-0.39.0-funtoo-go-bundle-0d0a3f1a8611460e20242cfbae0b39b098fcd092620078515b1ec0af4a680acfb6b80720781e00cfdae22232257295c6d65723f5411cb85a6bb20605898b2070.tar.gz"
+SRC_URI="https://github.com/kovidgoyal/kitty/releases/download/v0.39.1/kitty-0.39.1.tar.xz -> kitty-0.39.1.tar.xz
+https://direct.funtoo.org/1a/0f/63/1a0f63dfe7245d6faacb0b522ca9cd6dace1dabf28f5ce2cb2b491fa13baaf13e312738f49433f1d056245d6a6e38fe28031f84fa95e63f82b56a75a4b3661c1 -> kitty-0.39.1-funtoo-go-bundle-ca98340d23a403962ffb23df8befef8911a9f3bf643355f2eb4153f9e1e330f3f9c9defd04fcfc7c541f38f23b75884b30378248ea4389cd9149c98a1bcc830b.tar.gz"
 KEYWORDS="next"
 
 DESCRIPTION="Cross-platform, fast, feature-rich, GPU based terminal"
