@@ -5,7 +5,7 @@ EAPI=7
 MY_PV2=$(ver_cut 1-2)
 MY_PV3=$(ver_cut 1-3)
 MY_PV4=$(ver_cut 4)
-SRC_URI="https://ftp.osuosl.org/pub/tdf/libreoffice/stable/24.8.4/rpm/x86_64/LibreOffice_24.8.4_Linux_x86-64_rpm.tar.gz -> LibreOffice_24.8.4_Linux_x86-64_rpm.tar.gz"
+SRC_URI="https://ftp.osuosl.org/pub/tdf/libreoffice/stable/25.2.0/rpm/x86_64/LibreOffice_25.2.0_Linux_x86-64_rpm.tar.gz -> LibreOffice_25.2.0_Linux_x86-64_rpm.tar.gz"
 
 inherit prefix rpm toolchain-funcs xdg-utils
 
