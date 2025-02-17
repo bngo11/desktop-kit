@@ -1,31 +1,34 @@
 #!/usr/bin/env python3
 
-from metatools.version import generic
-
-
-def get_release(releases_data):
-	releases = list(filter(lambda x: x["prerelease"] is False and x["draft"] is False, releases_data))
-	return None if not releases else sorted(releases, key=lambda x: generic.parse(x["tag_name"])).pop()
-
+import json
 
 async def generate(hub, **pkginfo):
-	user = "bk138"
-	repo = pkginfo["name"]
-	releases_data = await hub.pkgtools.fetch.get_page(
-		f"https://api.github.com/repos/{user}/{repo}/releases", is_json=True
-	)
-	latest_release = get_release(releases_data)
-	if latest_release is None:
-		raise hub.pkgtools.ebuild.BreezyError(f"Can't find a suitable release of {repo}")
-	version = latest_release["tag_name"]
-	ebuild = hub.pkgtools.ebuild.BreezyBuild(
-		**pkginfo,
-		version=version,
-		artifacts=[
-			hub.pkgtools.ebuild.Artifact(
-				url=f"https://github.com/{user}/{repo}/archive/{version}.tar.gz",
-				final_name=f"{repo}-{version}.tar.gz",
-			)
-		],
-	)
-	ebuild.push()
+	github_user = "bk138"
+	github_repo = pkginfo.get("name")
+	json_data = await hub.pkgtools.fetch.get_page(f"https://api.github.com/repos/{github_user}/{github_repo}/releases", is_json=True)
+	version = None
+	url = None
+
+	for item in json_data:
+		try:
+			if item["prerelease"] or item["draft"]:
+				continue
+
+			version = item["tag_name"]
+			list(map(int, version.split(".")))
+			break
+
+		except (KeyError, IndexError, ValueError):
+			continue
+
+	if version:
+		final_name = f"{github_repo}-{version}.tar.gz"
+		url = f"https://github.com/bk138/gromit-mpx/archive/{version}.tar.gz"
+		ebuild = hub.pkgtools.ebuild.BreezyBuild(
+			**pkginfo,
+			version=version,
+			artifacts=[hub.pkgtools.ebuild.Artifact(url=url, final_name=final_name)]
+		)
+		ebuild.push()
+
+# vim: ts=4 sw=4 noet
