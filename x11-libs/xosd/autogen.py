@@ -1,32 +1,34 @@
 #!/usr/bin/env python3
 
 from bs4 import BeautifulSoup
-from packaging import version
-import re
 
 async def generate(hub, **pkginfo):
-    project_root = "libxosd"
-    project_name = "xosd"
+	html_data = await hub.pkgtools.fetch.get_page(f"https://sourceforge.net/projects/libxosd/files/libxosd")
+	soup = BeautifulSoup(html_data, "html.parser")
+	links = soup.find_all("span")
+	version = None
 
-    sourceforge_url = f"https://sourceforge.net/projects/{project_root}/files/{project_root}"
-    sourceforge_soup = BeautifulSoup(
-            await hub.pkgtools.fetch.get_page(sourceforge_url), "lxml"
-            )
+	for link in links:
+		cls = link.get("class")
+		if cls and 'name' in cls:
+			try:
+				proj_dir = link.text
+				version = proj_dir.split("-")[-1]
+				list(map(int, version.split(".")))
+				final_name = f"{proj_dir}.tar.gz"
+				break
 
-    files_list = sourceforge_soup.find(id="files_list")
-    files = (
-            version_row.get("title") for version_row in files_list.tbody.find_all("tr")
-            )
-    versions = { version.parse(re.search(r"\d+\.\d+(\.\d+)?", file).group()): file for file in files }
+			except ValueError:
+				continue
 
-    target_version = max(versions.keys())
-    target_file = versions[target_version]
+	if version:
+		url = f"https://sourceforge.net/projects/libxosd/files/libxosd/{proj_dir}/{final_name}"
+		ebuild = hub.pkgtools.ebuild.BreezyBuild(
+			**pkginfo,
+			version=version,
+			artifacts=[hub.pkgtools.ebuild.Artifact(url=url, final_name=final_name)],
+		)
 
-    src_url = f"https://downloads.sourceforge.net/{project_root}/{project_root}/{target_file}/{target_file}.tar.gz"
+		ebuild.push()
 
-    ebuild = hub.pkgtools.ebuild.BreezyBuild(
-            **pkginfo,
-            version=target_version,
-            artifacts=[hub.pkgtools.ebuild.Artifact(url=src_url)],
-            )
-    ebuild.push()
+# vim: ts=4 sw=4 noet

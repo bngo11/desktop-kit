@@ -5,7 +5,7 @@ inherit autotools
 
 DESCRIPTION="Library for overlaying text in X-Windows X-On-Screen-Display"
 HOMEPAGE="https://sourceforge.net/projects/libxosd/"
-SRC_URI="https://downloads.sourceforge.net/libxosd/libxosd/xosd-2.2.14/xosd-2.2.14.tar.gz -> xosd-2.2.14.tar.gz"
+SRC_URI="https://sourceforge.net/projects/libxosd/files/libxosd/xosd-2.2.14/xosd-2.2.14.tar.gz -> xosd-2.2.14.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
