@@ -10,7 +10,7 @@ inherit cmake distutils-r1
 
 DESCRIPTION="A Python framework for building 3D printing related applications"
 HOMEPAGE="https://github.com/Ultimaker/Uranium"
-SRC_URI="https://github.com/Ultimaker/Uranium/tarball/333b28f35d462e6b82e77d2c26c4cc91fc915abd -> Uranium-5.9.1-333b28f.tar.gz"
+SRC_URI="https://github.com/Ultimaker/Uranium/tarball/1d54ad3cb76dc7e176fa6591c8e1ef3458dcf79a -> Uranium-5.10.0-1d54ad3.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
