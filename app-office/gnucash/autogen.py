@@ -1,33 +1,41 @@
 #!/usr/bin/env python3
 
+import json
 
 async def generate(hub, **pkginfo):
 	github_user = "Gnucash"
-	github_repo = "gnucash"
-	json_list = await hub.pkgtools.fetch.get_page(
-		f"https://api.github.com/repos/{github_user}/{github_repo}/releases", is_json=True
-	)
-	for release in json_list:
-		if release["prerelease"] or release["draft"]:
-			continue
-		version = release["tag_name"]
-		url = release["html_url"]
-		for asset in release["assets"]:
-			if asset["content_type"] == "application/gzip":
-				url = asset["browser_download_url"]
-				break
-		break
-	final_name = f'{pkginfo["name"]}-{version}.tar.gz'
-	if version == "4.5":
-		pkginfo["revision"] = 1
-	ebuild = hub.pkgtools.ebuild.BreezyBuild(
-		**pkginfo,
-		github_user=github_user,
-		github_repo=github_repo,
-		version=version,
-		artifacts=[hub.pkgtools.ebuild.Artifact(url=url, final_name=final_name)],
-	)
-	ebuild.push()
+	github_repo = pkginfo.get("name")
+	json_data = await hub.pkgtools.fetch.get_page(f"https://api.github.com/repos/{github_user}/{github_repo}/releases", is_json=True)
+	version = None
+	url = None
 
+	for item in json_data:
+		try:
+			if item["prerelease"] or item["draft"]:
+				continue
+
+			version = item["tag_name"]
+			list(map(int, version.split(".")))
+
+			for asset in item['assets']:
+				asset_name = asset["name"]
+
+				if asset_name.endswith("tar.gz"):
+					url = asset["browser_download_url"]
+					break
+
+			if url:
+				break
+
+		except (KeyError, IndexError, ValueError):
+			continue
+
+	if version and url:
+		ebuild = hub.pkgtools.ebuild.BreezyBuild(
+			**pkginfo,
+			version=version,
+			artifacts=[hub.pkgtools.ebuild.Artifact(url=url, final_name=asset_name)]
+		)
+		ebuild.push()
 
 # vim: ts=4 sw=4 noet
