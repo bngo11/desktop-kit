@@ -128,6 +128,7 @@ src_prepare() {
 	done
 
 	sed -i -e "s/webkit2gtk-4.0/webkit2gtk-4.1/" CMakeLists.txt || die
+	sed -i -e "s#libxml/SAX.h#libxml/SAX2.h#" libgnucash/backend/xml/gnc-xml-helper.h || die
 }
 
 src_configure() {
