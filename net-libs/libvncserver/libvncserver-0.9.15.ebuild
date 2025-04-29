@@ -51,8 +51,10 @@ post_src_unpack() {
 
 src_configure() {
 	local mycmakeargs=(
+		-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 		-DWITH_FFMPEG=OFF
 		-DWITH_GTK=OFF
+		-DWITH_QT=OFF
 		-DWITH_SDL=OFF
 		-DWITH_24BPP=$(usex 24bpp ON OFF)
 		-DWITH_TIGHTVNC_FILETRANSFER=$(usex filetransfer ON OFF)
