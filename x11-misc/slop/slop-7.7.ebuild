@@ -6,7 +6,7 @@ inherit cmake
 
 DESCRIPTION="Application that queries the user for a selection for printing"
 HOMEPAGE="https://github.com/naelstrof/slop"
-SRC_URI="https://github.com/naelstrof/slop/tarball/5f4f0727e502fc3622fc526e965bbdaba9b36546 -> slop-7.6-5f4f072.tar.gz"
+SRC_URI="https://github.com/naelstrof/slop/tarball/b9b8c343f398ee623ee966e584ed515d8f844212 -> slop-7.7-b9b8c34.tar.gz"
 KEYWORDS="*"
 
 LICENSE="GPL-3"
