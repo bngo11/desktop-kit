@@ -7,7 +7,7 @@ inherit desktop multilib toolchain-funcs
 DESCRIPTION="Small dynamic tiling window manager for X11"
 HOMEPAGE="https://github.com/conformal/spectrwm"
 
-SRC_URI="https://api.github.com/repos/conformal/spectrwm/tarball/SPECTRWM_3_6_0 -> spectrwm-3.6.0.tar.gz"
+SRC_URI="https://api.github.com/repos/conformal/spectrwm/tarball/SPECTRWM_3_7_0 -> spectrwm-3.7.0.tar.gz"
 KEYWORDS="*"
 
 LICENSE="ISC"
