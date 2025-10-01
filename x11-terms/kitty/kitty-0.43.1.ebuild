@@ -91,8 +91,8 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://github.com/kovidgoyal/kitty/releases/download/v0.43.0/kitty-0.43.0.tar.xz -> kitty-0.43.0.tar.xz
-https://direct.funtoo.org/8f/61/d9/8f61d983c97fd87d7ec00d3949464ced82cefe0045c5bdab9b1e786e0f5dcff3e2b568cad30db5f433d9d34e62b2b253e3e620d568aedad1715fc6df7ef90137 -> kitty-0.43.0-funtoo-go-bundle-1318d217d2a97746fe2cdcba4c7222895fe5d4bc5849b75b80dad85e04a270002fedc38f3c11a537cefc207eb87d13d63d672dbec592dd2cf10f81aa6b34d274.tar.gz"
+SRC_URI="https://github.com/kovidgoyal/kitty/releases/download/v0.43.1/kitty-0.43.1.tar.xz -> kitty-0.43.1.tar.xz
+https://direct.funtoo.org/fb/fc/2d/fbfc2da6b038190cc58c61536ec40f69f8de844c5f3b8f989bd612e7034909a3c83f5cccefd991d45645d3bd68488f0bbd7806bd7f6105fbc724cbd775094b3d -> kitty-0.43.1-funtoo-go-bundle-1318d217d2a97746fe2cdcba4c7222895fe5d4bc5849b75b80dad85e04a270002fedc38f3c11a537cefc207eb87d13d63d672dbec592dd2cf10f81aa6b34d274.tar.gz"
 KEYWORDS="next"
 
 DESCRIPTION="Cross-platform, fast, feature-rich, GPU based terminal"
