@@ -11,6 +11,6 @@ RDEPEND=python_single_target_python3_12? ( dev-lang/python:3.12 >=dev-lang/pytho
 REQUIRED_USE=^^ ( python_single_target_python3_12 python_single_target_python3_10 python_single_target_python3_7 python_single_target_python3_9 python_single_target_python3_8 )
 RESTRICT=!test? ( test )
 SLOT=0
-SRC_URI=https://github.com/Ultimaker/Uranium/tarball/e4e370d5355e289bd040901c76b55fe61c0f590b -> Uranium-5.11.0-e4e370d.tar.gz
+SRC_URI=https://github.com/Ultimaker/Uranium/tarball/1e175fcea222fbeaf42a0c7e2d90bf9fbf9a1d88 -> Uranium-5.11.0-1e175fc.tar.gz
 _eclasses_=cmake	ac7cb516f6a288b6a82bc0649ce49878	distutils-r1	2654cd60824d19b36c803153eade0b14	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	e7575bc4a90349d76e72777013b2bbc2	python-single-r1	ce99dfba1cad0514af51a32b2b6964af	python-utils-r1	c57a84554d3dca7c828e40d877b2dd7d	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
-_md5_=56a1c7ec988a223dbd8a80aa53a7ba51
+_md5_=dff982e1566555ac3a62dc0b4ff37c98

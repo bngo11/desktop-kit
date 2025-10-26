@@ -8,7 +8,7 @@ inherit bash-completion-r1 check-reqs cmake python-single-r1
 
 DESCRIPTION="Double-entry accounting system with a command-line reporting interface"
 HOMEPAGE="https://www.ledger-cli.org/"
-SRC_URI="https://github.com/ledger/ledger/tarball/c4a19e6ffc250ddebe32bb8055555d36857926f1 -> ledger-3.3.2-c4a19e6.tar.gz"
+SRC_URI="https://github.com/ledger/ledger/tarball/059e3ad1fd36039e1873f004a7f1e1f408811ffd -> ledger-3.4.1-059e3ad.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
