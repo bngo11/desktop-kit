@@ -6,7 +6,7 @@ inherit meson
 
 DESCRIPTION="improved screen locker"
 HOMEPAGE="https://i3wm.org/i3lock/"
-SRC_URI="https://github.com/i3/i3lock/tarball/d8e853e9865b7e340063144f70c72d804fc772f3 -> i3lock-2.15-d8e853e.tar.gz"
+SRC_URI="https://github.com/i3/i3lock/tarball/1305cc2e7b7b909c9053aaa40793821c3fa94a6d -> i3lock-2.16-1305cc2.tar.gz"
 KEYWORDS="*"
 
 LICENSE="BSD"
