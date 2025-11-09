@@ -4,7 +4,7 @@ EAPI=7
 
 DESCRIPTION="If you live in the terminal, kitty is made for you! Cross-platform, fast, feature-rich, GPU based."
 HOMEPAGE="https://github.com/kovidgoyal/kitty"
-SRC_URI="https://github.com/kovidgoyal/kitty/releases/download/v0.43.1/kitty-0.43.1.tar.xz -> kitty-0.43.1.tar.xz"
+SRC_URI="https://github.com/kovidgoyal/kitty/releases/download/v0.44.0/kitty-0.44.0.tar.xz -> kitty-0.44.0.tar.xz"
 S="${WORKDIR}/kitty-${PV}"
 
 LICENSE="GPL-3"
