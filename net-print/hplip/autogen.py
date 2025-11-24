@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from bs4 import BeautifulSoup
+import requests
 
 async def generate(hub, **pkginfo):
 	html_data = await hub.pkgtools.fetch.get_page("https://sourceforge.net/projects/hplip/files/hplip/")
@@ -16,22 +17,46 @@ async def generate(hub, **pkginfo):
 
 			try:
 				list(map(int, version.split(".")))
-				break
+				patch_ver = 1
+				patch_url = None
+				while patch_ver < 11:
+					purl = f"https://dev.gentoo.org/~billie/distfiles/hplip-{version}-patches-{patch_ver}.tar.xz"
+					res = requests.head(purl)
+					if res.status_code == 200:
+						patch_url = purl
+					else:
+						break
+					patch_ver += 1
+				else:
+					continue
+				if patch_url:
+					break
 
 			except ValueError:
 				continue
 
-	if version:
+	if version and patch_url:
 		url = f"https://sourceforge.net/projects/hplip/files/hplip/{version}/hplip-{version}.tar.gz"
-		patch_url = f"https://dev.gentoo.org/~billie/distfiles/hplip-{version}-patches-1.tar.xz"
-		ebuild = hub.pkgtools.ebuild.BreezyBuild(
+		hplip = hub.pkgtools.ebuild.BreezyBuild(
 			**pkginfo,
+			template="hplip.tmpl",
 			version=version,
 			artifacts=[hub.pkgtools.ebuild.Artifact(url=url),
 						hub.pkgtools.ebuild.Artifact(url=patch_url)],
 		)
+		hplip.push()
 
+		url = f"https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-{version}-plugin.run"
+		ebuild = hub.pkgtools.ebuild.BreezyBuild(
+			cat="net-print",
+			name="hplip-plugin",
+			template="hplip-plugin.tmpl",
+			template_path=hplip.template_path,
+			version=version,
+			artifacts=[hub.pkgtools.ebuild.Artifact(url=url)],
+		)
 		ebuild.push()
+
 
 
 # vim: ts=4 sw=4 noet
