@@ -14,7 +14,7 @@ KEYWORDS="*"
 IUSE=""
 
 RDEPEND="
-	>=net-print/hplip-
+	>=net-print/hplip-3.25.6
 	virtual/udev
 "
 DEPEND=""

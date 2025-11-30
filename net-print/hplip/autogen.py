@@ -53,6 +53,7 @@ async def generate(hub, **pkginfo):
 			template="hplip-plugin.tmpl",
 			template_path=hplip.template_path,
 			version=version,
+			hplip_version=version,
 			artifacts=[hub.pkgtools.ebuild.Artifact(url=url)],
 		)
 		ebuild.push()
