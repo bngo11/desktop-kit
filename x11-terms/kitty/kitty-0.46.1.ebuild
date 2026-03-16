@@ -82,8 +82,8 @@ EGO_SUM=(
 	"golang.org/x/image v0.36.0/go.mod"
 	"golang.org/x/sys v0.0.0-20190916202348-b4ddaad3f8a3/go.mod"
 	"golang.org/x/sys v0.0.0-20201204225414-ed752295db88/go.mod"
-	"golang.org/x/sys v0.41.0"
-	"golang.org/x/sys v0.41.0/go.mod"
+	"golang.org/x/sys v0.42.0"
+	"golang.org/x/sys v0.42.0/go.mod"
 	"golang.org/x/text v0.34.0"
 	"golang.org/x/text v0.34.0/go.mod"
 	"gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod"
@@ -96,8 +96,8 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://github.com/kovidgoyal/kitty/releases/download/v0.46.0/kitty-0.46.0.tar.xz -> kitty-0.46.0.tar.xz
-https://direct.funtoo.org/36/0b/eb/360beb983e372399bcbcfa24b29b25894d984e79ed80d9051970e145d2d9e1f4686d1d145b7d099a07dd1238d94768d04400cf73b412e78a8e5a927f7ae76e1d -> kitty-0.46.0-funtoo-go-bundle-652ce671b2b6233d2b9402be58bc310192cc6721e34c427221234b18ea40ae3e1c869f45d57b4b3d11c6d80ae967152877c06c611f7d6cf12d127d19ec4eb361.tar.gz"
+SRC_URI="https://github.com/kovidgoyal/kitty/releases/download/v0.46.1/kitty-0.46.1.tar.xz -> kitty-0.46.1.tar.xz
+https://direct.funtoo.org/9d/9f/b4/9d9fb4c44b31dda53371260155df291f6c4954e297199995c67fdde5830beb4e329fd5ab376f0b7f7da02c9faf2812aa7e630f3b171f4ed74a4ba1b0e3fe4a7e -> kitty-0.46.1-funtoo-go-bundle-e18910eb7aac38e6f254510942a648648c399b5ceecffa8665414ffa6653f225100a288ed1bf236ca154a145659ccab92265294ee4c97d2bb813bbe4a07ef4cf.tar.gz"
 KEYWORDS="next"
 
 DESCRIPTION="If you live in the terminal, kitty is made for you! Cross-platform, fast, feature-rich, GPU based."
