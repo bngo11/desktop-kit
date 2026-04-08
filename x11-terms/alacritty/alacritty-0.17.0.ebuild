@@ -8,8 +8,8 @@ inherit bash-completion-r1 cargo desktop python-any-r1
 
 DESCRIPTION="A cross-platform, OpenGL terminal emulator."
 HOMEPAGE="https://github.com/alacritty/alacritty"
-SRC_URI="https://github.com/alacritty/alacritty/tarball/934831baf1adb9db76b35630002b2b54a960406f -> alacritty-0.16.1-934831b.tar.gz
-https://direct.funtoo.org/27/30/c5/2730c5ae7b9ca178e63a830ae27043b83221b63dc233005288c74fd7a9778194000c035a306f8f54cd74ad6a1c051014bd75fda2770dce0a7f9dc5a4261b1caa -> alacritty-0.16.1-funtoo-crates-bundle-c4841a322d1983d83fb8b6e88cf28fc5729fbca7aefd9f3bc02d256337c01df63787809aff2880dc9d386ae61cd1846f3c4ad2ebfa5778d8266afd2b7cae101e.tar.gz"
+SRC_URI="https://github.com/alacritty/alacritty/tarball/dc946285396bd3e251b6942af7e9961b74f76bee -> alacritty-0.17.0-dc94628.tar.gz
+https://direct.funtoo.org/dd/17/cb/dd17cbe93f3275f52aca9689d52c2199469dc316bdef9fbf39348725d382ce977de3aa372312e39b588bbe22cfee96253df34c14a85ce2c63426d01c55465731 -> alacritty-0.17.0-funtoo-crates-bundle-7e032f4f858c793cef823ada6e56e803e3b3c4db30526bc4ab199253da4f78b2d20cc4fcd286a90581558d291945e6fa257bedb7eb0ef4633000a40b52cd4779.tar.gz"
 
 KEYWORDS="*"
 LICENSE="Apache-2.0 Apache-2.0-with-LLVM-exceptions Boost-1.0 BSD BSD-2 CC0-1.0 FTL ISC MIT MPL-2.0 Unlicense WTFPL-2 ZLIB"
