@@ -8,7 +8,7 @@ inherit distutils-r1
 
 DESCRIPTION="A full-featured, hackable tiling window manager written in Python"
 HOMEPAGE="http://www.qtile.org/"
-SRC_URI="https://api.github.com/repos/qtile/qtile/tarball/v0.35.0 -> qtile-0.35.0.tar.gz"
+SRC_URI="https://api.github.com/repos/qtile/qtile/tarball/v0.36.0 -> qtile-0.36.0.tar.gz"
 
 DEPEND=""
 RDEPEND="
