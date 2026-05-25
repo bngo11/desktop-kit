@@ -46,6 +46,26 @@ async def generate(hub, **pkginfo):
 		)
 		hplip.push()
 
+	html_data = await hub.pkgtools.fetch.get_page("https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/")
+	soup = BeautifulSoup(html_data, "html.parser")
+	links = soup.find_all("a")
+	links.reverse()
+	version = None
+
+	for link in links:
+		href = link.get("href")
+		if href and href.endswith('.run'):
+			parts = href.split("-")
+			version = parts[1]
+
+			try:
+				list(map(int, version.split(".")))
+				break
+
+			except ValueError:
+				continue
+
+	if version:
 		url = f"https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-{version}-plugin.run"
 		ebuild = hub.pkgtools.ebuild.BreezyBuild(
 			cat="net-print",
