@@ -50,8 +50,8 @@ EGO_SUM=(
 	"github.com/kovidgoyal/imaging v1.8.21/go.mod"
 	"github.com/lufia/plan9stats v0.0.0-20230326075908-cb1d2100619a"
 	"github.com/lufia/plan9stats v0.0.0-20230326075908-cb1d2100619a/go.mod"
-	"github.com/nwaples/rardecode/v2 v2.2.2"
-	"github.com/nwaples/rardecode/v2 v2.2.2/go.mod"
+	"github.com/nwaples/rardecode/v2 v2.2.3"
+	"github.com/nwaples/rardecode/v2 v2.2.3/go.mod"
 	"github.com/pmezard/go-difflib v1.0.0"
 	"github.com/pmezard/go-difflib v1.0.0/go.mod"
 	"github.com/power-devops/perfstat v0.0.0-20240221224432-82ca36839d55"
@@ -100,8 +100,8 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://github.com/kovidgoyal/kitty/releases/download/v0.47.0/kitty-0.47.0.tar.xz -> kitty-0.47.0.tar.xz
-https://direct.funtoo.org/bb/01/d9/bb01d99a061d10dcd0ae0dd8aa22038ec0615200a7966ad261b5a42dd29f2136658a41d346cba5a1d1c23042432585f681889def5b70825c3774114526af8b81 -> kitty-0.47.0-funtoo-go-bundle-d6b15570d751b175b6e830116d6d2138dd433505333747c98fc1c256aeebf9217a1fc84d3f0e943d26eb20a363d0e7b26a961be29b3c0a198dd33b8212f58141.tar.gz"
+SRC_URI="https://github.com/kovidgoyal/kitty/releases/download/v0.47.1/kitty-0.47.1.tar.xz -> kitty-0.47.1.tar.xz
+https://direct.funtoo.org/06/83/15/068315fb6c7121118a3d96782ba7b071b2a2d9075a0822f00a139b70fba4a65eae057193e55bf07d983f44a4108470569659afa96e7b2884b9fd517aacf7ffeb -> kitty-0.47.1-funtoo-go-bundle-a6f775a429fc78dfb581d0f8c0d9782480a4eb349db53a3403eb91e5b133f2dafe3a348d4c2efa1734be0cde92554f106da5ecc53abff5811de5bb5fd07a983c.tar.gz"
 KEYWORDS="next"
 
 DESCRIPTION="If you live in the terminal, kitty is made for you! Cross-platform, fast, feature-rich, GPU based."
