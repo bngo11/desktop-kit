@@ -20,8 +20,8 @@ EGO_SUM=(
 	"github.com/davecgh/go-spew v1.1.1/go.mod"
 	"github.com/dlclark/regexp2 v1.12.0"
 	"github.com/dlclark/regexp2 v1.12.0/go.mod"
-	"github.com/ebitengine/purego v0.10.0"
-	"github.com/ebitengine/purego v0.10.0/go.mod"
+	"github.com/ebitengine/purego v0.10.1"
+	"github.com/ebitengine/purego v0.10.1/go.mod"
 	"github.com/emmansun/base64 v0.9.0"
 	"github.com/emmansun/base64 v0.9.0/go.mod"
 	"github.com/go-ole/go-ole v1.2.6"
@@ -62,8 +62,8 @@ EGO_SUM=(
 	"github.com/seancfoley/bintree v1.3.1/go.mod"
 	"github.com/seancfoley/ipaddress-go v1.7.1"
 	"github.com/seancfoley/ipaddress-go v1.7.1/go.mod"
-	"github.com/sgtdi/fswatcher v1.2.0"
-	"github.com/sgtdi/fswatcher v1.2.0/go.mod"
+	"github.com/sgtdi/fswatcher v1.3.0"
+	"github.com/sgtdi/fswatcher v1.3.0/go.mod"
 	"github.com/shirou/gopsutil/v4 v4.26.4"
 	"github.com/shirou/gopsutil/v4 v4.26.4/go.mod"
 	"github.com/stretchr/testify v1.11.1"
@@ -82,12 +82,12 @@ EGO_SUM=(
 	"github.com/zeebo/xxh3 v1.1.0/go.mod"
 	"golang.org/x/exp v0.0.0-20230801115018-d63ba01acd4b"
 	"golang.org/x/exp v0.0.0-20230801115018-d63ba01acd4b/go.mod"
-	"golang.org/x/image v0.40.0"
-	"golang.org/x/image v0.40.0/go.mod"
+	"golang.org/x/image v0.41.0"
+	"golang.org/x/image v0.41.0/go.mod"
 	"golang.org/x/sys v0.0.0-20190916202348-b4ddaad3f8a3/go.mod"
 	"golang.org/x/sys v0.0.0-20201204225414-ed752295db88/go.mod"
-	"golang.org/x/sys v0.44.0"
-	"golang.org/x/sys v0.44.0/go.mod"
+	"golang.org/x/sys v0.45.0"
+	"golang.org/x/sys v0.45.0/go.mod"
 	"golang.org/x/text v0.37.0"
 	"golang.org/x/text v0.37.0/go.mod"
 	"gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod"
@@ -100,8 +100,8 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://github.com/kovidgoyal/kitty/releases/download/v0.47.1/kitty-0.47.1.tar.xz -> kitty-0.47.1.tar.xz
-https://direct.funtoo.org/06/83/15/068315fb6c7121118a3d96782ba7b071b2a2d9075a0822f00a139b70fba4a65eae057193e55bf07d983f44a4108470569659afa96e7b2884b9fd517aacf7ffeb -> kitty-0.47.1-funtoo-go-bundle-a6f775a429fc78dfb581d0f8c0d9782480a4eb349db53a3403eb91e5b133f2dafe3a348d4c2efa1734be0cde92554f106da5ecc53abff5811de5bb5fd07a983c.tar.gz"
+SRC_URI="https://github.com/kovidgoyal/kitty/releases/download/v0.47.2/kitty-0.47.2.tar.xz -> kitty-0.47.2.tar.xz
+https://direct.funtoo.org/df/e7/14/dfe7141e672c477293b4ee418c7760186cacf2aad78864761173451e1581ffe418983667266ff40a0529d00cd73a8f5f5d04c59a1c31d6d7aaf1f7956e3567cb -> kitty-0.47.2-funtoo-go-bundle-a6e63be7e2a98867b494445a5dbfc0f860a6fb765ee66fe29926ca7dfc80d970be6815d4d67f164a9b76031faff176d18ee56cd8419df14fc58bce6b915eb06c.tar.gz"
 KEYWORDS="next"
 
 DESCRIPTION="If you live in the terminal, kitty is made for you! Cross-platform, fast, feature-rich, GPU based."
