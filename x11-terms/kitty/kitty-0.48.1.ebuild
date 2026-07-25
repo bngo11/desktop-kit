@@ -102,8 +102,8 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://github.com/kovidgoyal/kitty/releases/download/v0.48.0/kitty-0.48.0.tar.xz -> kitty-0.48.0.tar.xz
-https://direct.funtoo.org/fe/f8/e8/fef8e8d65f008911980198b2ff67456f92972e93862319af1ab0cd12a88d2c6ad19c19d8bde6269a5cb01cb84c0de48e249be1f7d6efab5dc27f092fadeedfb6 -> kitty-0.48.0-funtoo-go-bundle-2c2ceec81754e46d2101ab15f1a91dee9336291d85cad69eeca9c4689f6381df3e269f22c8492fb0eb16738862feb2a7e72b12d0a37826d4ab91b466ac2107f8.tar.gz"
+SRC_URI="https://github.com/kovidgoyal/kitty/releases/download/v0.48.1/kitty-0.48.1.tar.xz -> kitty-0.48.1.tar.xz
+https://direct.funtoo.org/e0/2c/ba/e02cba3d8d0e843ecf19137f7603eef24b2b63927b69789b062f4c0324a4b94a2516202524515740c11d5e0a3ac66a4889e1aca1e333ce25ca45a2b714e62fc3 -> kitty-0.48.1-funtoo-go-bundle-2c2ceec81754e46d2101ab15f1a91dee9336291d85cad69eeca9c4689f6381df3e269f22c8492fb0eb16738862feb2a7e72b12d0a37826d4ab91b466ac2107f8.tar.gz"
 KEYWORDS="next"
 
 DESCRIPTION="If you live in the terminal, kitty is made for you! Cross-platform, fast, feature-rich, GPU based."
