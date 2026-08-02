@@ -22,8 +22,8 @@ EGO_SUM=(
 	"github.com/dlclark/regexp2 v1.12.0/go.mod"
 	"github.com/dlclark/regexp2/v2 v2.2.1"
 	"github.com/dlclark/regexp2/v2 v2.2.1/go.mod"
-	"github.com/ebitengine/purego v0.10.1"
-	"github.com/ebitengine/purego v0.10.1/go.mod"
+	"github.com/ebitengine/purego v0.10.2"
+	"github.com/ebitengine/purego v0.10.2/go.mod"
 	"github.com/emmansun/base64 v0.10.0"
 	"github.com/emmansun/base64 v0.10.0/go.mod"
 	"github.com/go-ole/go-ole v1.2.6"
@@ -102,8 +102,8 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://github.com/kovidgoyal/kitty/releases/download/v0.48.1/kitty-0.48.1.tar.xz -> kitty-0.48.1.tar.xz
-https://direct.funtoo.org/e0/2c/ba/e02cba3d8d0e843ecf19137f7603eef24b2b63927b69789b062f4c0324a4b94a2516202524515740c11d5e0a3ac66a4889e1aca1e333ce25ca45a2b714e62fc3 -> kitty-0.48.1-funtoo-go-bundle-2c2ceec81754e46d2101ab15f1a91dee9336291d85cad69eeca9c4689f6381df3e269f22c8492fb0eb16738862feb2a7e72b12d0a37826d4ab91b466ac2107f8.tar.gz"
+SRC_URI="https://github.com/kovidgoyal/kitty/releases/download/v0.48.2/kitty-0.48.2.tar.xz -> kitty-0.48.2.tar.xz
+https://direct.funtoo.org/59/6b/32/596b32240099ed36420ff13facd5403c3703efe1434a0f4879ec6fa5932ddfb753535792124b3a5084812f8ddcd1186478e58e22726faf774c6dcec4ec64a918 -> kitty-0.48.2-funtoo-go-bundle-0e651db84189a3223b4728f5189b59736d7cd11f241ae4a4f530dbda3c35dc0149fc9460965cbe2dc33ad0b16024fe0ebf38f53f1465de54ea4687beba451236.tar.gz"
 KEYWORDS="next"
 
 DESCRIPTION="If you live in the terminal, kitty is made for you! Cross-platform, fast, feature-rich, GPU based."
