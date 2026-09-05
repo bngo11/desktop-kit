@@ -8,7 +8,7 @@ inherit distutils-r1 optfeature virtualx xdg
 
 DESCRIPTION="Multiple GNOME terminals in one window"
 HOMEPAGE="https://github.com/gnome-terminator/terminator"
-SRC_URI="https://github.com/gnome-terminator/terminator/tarball/436c77ee9c9f4446f0e025552afb60afed9c6bc7 -> terminator-2.1.5-436c77e.tar.gz"
+SRC_URI="https://github.com/gnome-terminator/terminator/tarball/754988c03a9c06a7cea4c4844c560533e0828762 -> terminator-2.1.6-754988c.tar.gz"
 
 
 LICENSE="GPL-2"
