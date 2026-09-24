@@ -48,6 +48,8 @@ EGO_SUM=(
 	"github.com/kovidgoyal/go-parallel v1.1.1/go.mod"
 	"github.com/kovidgoyal/go-shm v1.0.0"
 	"github.com/kovidgoyal/go-shm v1.0.0/go.mod"
+	"github.com/kovidgoyal/go-shm/v2 v2.0.1"
+	"github.com/kovidgoyal/go-shm/v2 v2.0.1/go.mod"
 	"github.com/kovidgoyal/imaging v1.8.23"
 	"github.com/kovidgoyal/imaging v1.8.23/go.mod"
 	"github.com/lufia/plan9stats v0.0.0-20230326075908-cb1d2100619a"
@@ -62,8 +64,8 @@ EGO_SUM=(
 	"github.com/rwcarlsen/goexif v0.0.0-20190401172101-9e8deecbddbd/go.mod"
 	"github.com/seancfoley/bintree v1.4.0"
 	"github.com/seancfoley/bintree v1.4.0/go.mod"
-	"github.com/seancfoley/ipaddress-go v1.8.3"
-	"github.com/seancfoley/ipaddress-go v1.8.3/go.mod"
+	"github.com/seancfoley/ipaddress-go v1.8.4"
+	"github.com/seancfoley/ipaddress-go v1.8.4/go.mod"
 	"github.com/sgtdi/fswatcher v1.3.0"
 	"github.com/sgtdi/fswatcher v1.3.0/go.mod"
 	"github.com/shirou/gopsutil/v4 v4.26.8"
@@ -102,8 +104,8 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://github.com/kovidgoyal/kitty/releases/download/v0.49.0/kitty-0.49.0.tar.xz -> kitty-0.49.0.tar.xz
-https://direct.funtoo.org/fd/cc/d6/fdccd61c12a2b287f3ec4cd33e647741fdebf0dd2f14e728a87297f0fd9d014485d2ff80ccf9865b1ddfa3ff096c07350a06c8eb2ddaaba08894274fed89d870 -> kitty-0.49.0-funtoo-go-bundle-0621d3d77e0fac3a4aae760a76ad15bd0c3d310ed01718c6c0233a925cd878fb1a1b757675ee12ffa5f2cbb46407b56786452fc63213fb11dfe1805a57a29139.tar.gz"
+SRC_URI="https://github.com/kovidgoyal/kitty/releases/download/v0.49.1/kitty-0.49.1.tar.xz -> kitty-0.49.1.tar.xz
+https://direct.funtoo.org/30/18/ab/3018ab6fb48ed55225a327b61c71ed986d91605ef91034047174858ba3f0578db1230ac11284f80371f9a8176c99117ad759ef98a4894e0162986b7045bee02d -> kitty-0.49.1-funtoo-go-bundle-fe4b7a87c5a306c2ab26b73d0d7cfbef4febb85a3d8d2ba45297de52948ab951ab82488b51cb80f0b82c83b0732cb0697c841d225704329b58cf11f149f8bc15.tar.gz"
 KEYWORDS="next"
 
 DESCRIPTION="If you live in the terminal, kitty is made for you! Cross-platform, fast, feature-rich, GPU based."
