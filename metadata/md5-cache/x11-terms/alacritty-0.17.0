@@ -1,6 +1,6 @@
 BDEPEND=dev-util/cmake virtual/rust >=virtual/rust-1.37.0
 DEFINED_PHASES=compile configure install setup test unpack
-DEPEND=|| ( dev-lang/python:3.12 dev-lang/python:3.14 )
+DEPEND=|| ( dev-lang/python:3.8 dev-lang/python:3.9 dev-lang/python:3.7 dev-lang/python:3.10 dev-lang/python:3.12 dev-lang/python:3.14 )
 DESCRIPTION=A cross-platform, OpenGL terminal emulator.
 EAPI=7
 HOMEPAGE=https://github.com/alacritty/alacritty
@@ -11,5 +11,5 @@ RDEPEND=media-libs/fontconfig:= media-libs/freetype:2 X? ( x11-libs/libxcb:=[xkb
 REQUIRED_USE=|| ( wayland X )
 SLOT=0
 SRC_URI=https://github.com/alacritty/alacritty/tarball/dc946285396bd3e251b6942af7e9961b74f76bee -> alacritty-0.17.0-dc94628.tar.gz https://direct.funtoo.org/dd/17/cb/dd17cbe93f3275f52aca9689d52c2199469dc316bdef9fbf39348725d382ce977de3aa372312e39b588bbe22cfee96253df34c14a85ce2c63426d01c55465731 -> alacritty-0.17.0-funtoo-crates-bundle-7e032f4f858c793cef823ada6e56e803e3b3c4db30526bc4ab199253da4f78b2d20cc4fcd286a90581558d291945e6fa257bedb7eb0ef4633000a40b52cd4779.tar.gz
-_eclasses_=bash-completion-r1	47a7402d95930413ce25ba8d857339bb	cargo	a3e90d3e6ca8541d967cff212149cffc	desktop	b1d22ac8bdd4679ab79c71aca235009d	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	python-any-r1	54a3178500786b0a7ede4a23b7f2a6ad	python-utils-r1	63b0a8c97581d572e6bb8a48b5fd2374	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_eclasses_=bash-completion-r1	47a7402d95930413ce25ba8d857339bb	cargo	a3e90d3e6ca8541d967cff212149cffc	desktop	b1d22ac8bdd4679ab79c71aca235009d	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	python-any-r1	54a3178500786b0a7ede4a23b7f2a6ad	python-utils-r1	89d946015dea2829c7554116a61cae96	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
 _md5_=2425bac2830c0d0c9962d31e2731796d
