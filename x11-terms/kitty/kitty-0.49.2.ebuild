@@ -14,16 +14,16 @@ EGO_SUM=(
 	"github.com/alecthomas/chroma/v2 v2.27.0/go.mod"
 	"github.com/alecthomas/repr v0.5.2"
 	"github.com/alecthomas/repr v0.5.2/go.mod"
-	"github.com/bmatcuk/doublestar/v4 v4.10.0"
-	"github.com/bmatcuk/doublestar/v4 v4.10.0/go.mod"
+	"github.com/bmatcuk/doublestar/v4 v4.10.2"
+	"github.com/bmatcuk/doublestar/v4 v4.10.2/go.mod"
 	"github.com/davecgh/go-spew v1.1.1"
 	"github.com/davecgh/go-spew v1.1.1/go.mod"
 	"github.com/dlclark/regexp2 v1.12.0"
 	"github.com/dlclark/regexp2 v1.12.0/go.mod"
 	"github.com/dlclark/regexp2/v2 v2.2.1"
 	"github.com/dlclark/regexp2/v2 v2.2.1/go.mod"
-	"github.com/ebitengine/purego v0.11.0"
-	"github.com/ebitengine/purego v0.11.0/go.mod"
+	"github.com/ebitengine/purego v0.11.1"
+	"github.com/ebitengine/purego v0.11.1/go.mod"
 	"github.com/emmansun/base64 v0.10.0"
 	"github.com/emmansun/base64 v0.10.0/go.mod"
 	"github.com/go-ole/go-ole v1.2.6"
@@ -76,8 +76,8 @@ EGO_SUM=(
 	"github.com/tklauser/go-sysconf v0.3.16/go.mod"
 	"github.com/tklauser/numcpus v0.11.0"
 	"github.com/tklauser/numcpus v0.11.0/go.mod"
-	"github.com/ulikunitz/xz v0.5.16"
-	"github.com/ulikunitz/xz v0.5.16/go.mod"
+	"github.com/ulikunitz/xz v0.5.17"
+	"github.com/ulikunitz/xz v0.5.17/go.mod"
 	"github.com/yusufpapurcu/wmi v1.2.4"
 	"github.com/yusufpapurcu/wmi v1.2.4/go.mod"
 	"github.com/zeebo/assert v1.3.0"
@@ -104,8 +104,8 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://github.com/kovidgoyal/kitty/releases/download/v0.49.1/kitty-0.49.1.tar.xz -> kitty-0.49.1.tar.xz
-https://direct.funtoo.org/30/18/ab/3018ab6fb48ed55225a327b61c71ed986d91605ef91034047174858ba3f0578db1230ac11284f80371f9a8176c99117ad759ef98a4894e0162986b7045bee02d -> kitty-0.49.1-funtoo-go-bundle-fe4b7a87c5a306c2ab26b73d0d7cfbef4febb85a3d8d2ba45297de52948ab951ab82488b51cb80f0b82c83b0732cb0697c841d225704329b58cf11f149f8bc15.tar.gz"
+SRC_URI="https://github.com/kovidgoyal/kitty/releases/download/v0.49.2/kitty-0.49.2.tar.xz -> kitty-0.49.2.tar.xz
+https://direct.funtoo.org/e4/ee/1b/e4ee1b38d0ba828abaf458b586e0723295ea2f9cbe70084549405fef3be6bbb9e84ce0d2634de53dfe16a68c012cc777b47795fbafa7a61b9f2ef19ca8464e93 -> kitty-0.49.2-funtoo-go-bundle-df92a1fdab4c68b9464ca62f2bb70ed8dd266a3f169639ea29af2ac59b93db1a58e0fa146790aacbd7e0c975dceff400ad10030f3006b76ae5cdc7b3c4c2fcad.tar.gz"
 KEYWORDS="next"
 
 DESCRIPTION="If you live in the terminal, kitty is made for you! Cross-platform, fast, feature-rich, GPU based."
